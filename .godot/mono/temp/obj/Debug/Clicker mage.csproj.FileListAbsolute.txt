@@ -1,0 +1,18 @@
+Z:\GameDev\Proyectos\clicker-mage\.godot\mono\temp\bin\Debug\Clicker mage.deps.json
+Z:\GameDev\Proyectos\clicker-mage\.godot\mono\temp\bin\Debug\Clicker mage.runtimeconfig.json
+Z:\GameDev\Proyectos\clicker-mage\.godot\mono\temp\bin\Debug\Clicker mage.dll
+Z:\GameDev\Proyectos\clicker-mage\.godot\mono\temp\bin\Debug\Clicker mage.pdb
+Z:\GameDev\Proyectos\clicker-mage\.godot\mono\temp\bin\Debug\GodotSharp.dll
+Z:\GameDev\Proyectos\clicker-mage\.godot\mono\temp\bin\Debug\GodotSharpEditor.dll
+Z:\GameDev\Proyectos\clicker-mage\.godot\mono\temp\obj\Debug\Clicker mage.csproj.AssemblyReference.cache
+Z:\GameDev\Proyectos\clicker-mage\.godot\mono\temp\obj\Debug\Clicker mage.GeneratedMSBuildEditorConfig.editorconfig
+Z:\GameDev\Proyectos\clicker-mage\.godot\mono\temp\obj\Debug\Clicker mage.AssemblyInfoInputs.cache
+Z:\GameDev\Proyectos\clicker-mage\.godot\mono\temp\obj\Debug\Clicker mage.AssemblyInfo.cs
+Z:\GameDev\Proyectos\clicker-mage\.godot\mono\temp\obj\Debug\Clicker mage.csproj.CoreCompileInputs.cache
+Z:\GameDev\Proyectos\clicker-mage\.godot\mono\temp\obj\Debug\Clicker mage.sourcelink.json
+Z:\GameDev\Proyectos\clicker-mage\.godot\mono\temp\obj\Debug\Clicker .30B28958.Up2Date
+Z:\GameDev\Proyectos\clicker-mage\.godot\mono\temp\obj\Debug\Clicker mage.dll
+Z:\GameDev\Proyectos\clicker-mage\.godot\mono\temp\obj\Debug\refint\Clicker mage.dll
+Z:\GameDev\Proyectos\clicker-mage\.godot\mono\temp\obj\Debug\Clicker mage.pdb
+Z:\GameDev\Proyectos\clicker-mage\.godot\mono\temp\obj\Debug\Clicker mage.genruntimeconfig.cache
+Z:\GameDev\Proyectos\clicker-mage\.godot\mono\temp\obj\Debug\ref\Clicker mage.dll

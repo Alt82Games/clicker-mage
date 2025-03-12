@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "v1Xlfft98tc=",
+  "success": true,
+  "projectFilePath": "Z:\\GameDev\\Proyectos\\clicker-mage\\Clicker mage.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\rafer\\.nuget\\packages\\godot.sourcegenerators\\4.4.0\\godot.sourcegenerators.4.4.0.nupkg.sha512",
+    "C:\\Users\\rafer\\.nuget\\packages\\godotsharp\\4.4.0\\godotsharp.4.4.0.nupkg.sha512",
+    "C:\\Users\\rafer\\.nuget\\packages\\godotsharpeditor\\4.4.0\\godotsharpeditor.4.4.0.nupkg.sha512"
+  ],
+  "logs": []
+}

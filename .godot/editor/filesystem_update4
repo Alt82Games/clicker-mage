@@ -1,1 +1,8 @@
+res://scenes/world_00.tscn
+res://scripts/BasicEnemy.cs
+res://entities/basic_enemy.tscn
 res://scripts/World00.cs
+res://components/lifeBar.tscn
+res://scripts/GameManager.cs
+res://scenes/game_manager.tscn
+res://components/LifeBar.cs

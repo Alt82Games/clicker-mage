@@ -1,0 +1,23 @@
+[gd_scene load_steps=6 format=3 uid="uid://dwm4wyj5r86hv"]
+
+[ext_resource type="Script" uid="uid://kwia1k2h7vd1" path="res://scripts/BasicEnemy.cs" id="1_xiaos"]
+[ext_resource type="Texture2D" uid="uid://ce7g2ha6v17w6" path="res://art/00C.png" id="1_xnv5r"]
+[ext_resource type="PackedScene" uid="uid://du4p2hlv0umek" path="res://components/hpBar.tscn" id="2_xiaos"]
+[ext_resource type="Script" uid="uid://5ds3n8f4hn0a" path="res://scripts/HpBar.cs" id="4_x3g6g"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xiaos"]
+radius = 8.0
+
+[node name="basicEnemy" type="RigidBody2D"]
+z_index = 1
+script = ExtResource("1_xiaos")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_xnv5r")
+
+[node name="body" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_xiaos")
+
+[node name="hpBar" parent="." instance=ExtResource("2_xiaos")]
+position = Vector2(0, -10)
+script = ExtResource("4_x3g6g")

@@ -1,6 +1,121 @@
-[gd_scene load_steps=2 format=3 uid="uid://dbq005abatfkb"]
+[gd_scene load_steps=18 format=3 uid="uid://dbq005abatfkb"]
 
 [ext_resource type="Script" uid="uid://bi48nt3q0yyuu" path="res://scripts/World00.cs" id="1_vhcyi"]
+[ext_resource type="PackedScene" uid="uid://dnm2toegwy5yo" path="res://scenes/game_manager.tscn" id="2_s2gya"]
+[ext_resource type="Texture2D" uid="uid://b4eyyogb3b486" path="res://art/GameBackground.png" id="2_wnmtb"]
+[ext_resource type="Texture2D" uid="uid://dfm6tbqovvlht" path="res://art/FuegoTile1.png" id="3_0rulk"]
+[ext_resource type="Texture2D" uid="uid://831yap4sjqdl" path="res://art/foreground.png" id="4_s2gya"]
+[ext_resource type="Texture2D" uid="uid://bh7dbnvg43jdr" path="res://art/Arbol2.png" id="5_1or4w"]
+[ext_resource type="PackedScene" uid="uid://dwm4wyj5r86hv" path="res://entities/basic_enemy.tscn" id="6_0rulk"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_du26i"]
+atlas = ExtResource("3_0rulk")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4xpu2"]
+atlas = ExtResource("3_0rulk")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3s3g6"]
+atlas = ExtResource("3_0rulk")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3irx1"]
+atlas = ExtResource("3_0rulk")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rqha0"]
+atlas = ExtResource("3_0rulk")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4xmt8"]
+atlas = ExtResource("3_0rulk")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_chbfl"]
+atlas = ExtResource("3_0rulk")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lteob"]
+atlas = ExtResource("3_0rulk")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tfq0k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_du26i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4xpu2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3s3g6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3irx1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rqha0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4xmt8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_chbfl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lteob")
+}],
+"loop": true,
+"name": &"Fire",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_66co2"]
+size = Vector2(640, 26)
 
 [node name="world_00" type="Node2D"]
 script = ExtResource("1_vhcyi")
+
+[node name="gameManager" parent="." instance=ExtResource("2_s2gya")]
+
+[node name="Node" type="Node" parent="."]
+
+[node name="background" type="Sprite2D" parent="Node"]
+position = Vector2(320, 180)
+texture = ExtResource("2_wnmtb")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Node"]
+root_node = NodePath("../Fuego")
+
+[node name="Fuego" type="AnimatedSprite2D" parent="Node"]
+position = Vector2(128, 252)
+sprite_frames = SubResource("SpriteFrames_tfq0k")
+animation = &"Fire"
+autoplay = "Fire"
+frame_progress = 0.0707332
+
+[node name="arbol" type="Sprite2D" parent="Node"]
+position = Vector2(32, 275)
+texture = ExtResource("5_1or4w")
+
+[node name="foreground" type="StaticBody2D" parent="Node"]
+
+[node name="foreground" type="Sprite2D" parent="Node/foreground"]
+position = Vector2(320, 180)
+texture = ExtResource("4_s2gya")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node/foreground"]
+position = Vector2(320, 320)
+scale = Vector2(1.5, 1)
+shape = SubResource("RectangleShape2D_66co2")
+
+[node name="enemies" type="Node2D" parent="."]
+
+[node name="basicEnemy" parent="enemies" instance=ExtResource("6_0rulk")]
+position = Vector2(197, 195)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(196, 195)
+zoom = Vector2(3, 3)
